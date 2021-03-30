@@ -1,17 +1,18 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.6'
+ruby '2.7.1'
 
 gem 'rails', '~> 6.1.1'
-gem 'mysql2', '~> 0.5'
+gem 'mysql2', '~> 0.4.10'
+
 gem 'puma', '~> 5.0'
 
 # Use Active Model has_secure_password
 gem 'bcrypt'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.4', require: false
+#gem 'bootsnap', '>= 1.4.4', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
@@ -26,7 +27,7 @@ gem 'jsonapi.rb'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rspec-rails', '~> 4.0.2'
+  gem 'rspec-rails', '5.0.1'
 end
 
 group :development do
